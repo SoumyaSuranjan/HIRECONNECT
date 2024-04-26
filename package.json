@@ -1,0 +1,39 @@
+{
+  "name": "jfst_project",
+  "version": "1.0.0",
+  "description": "This Website model is made for College Internship Hiring Process.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Himani-Patil/JFST_Project.git"
+  },
+  "author": "KIIT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Himani-Patil/JFST_Project/issues"
+  },
+  "homepage": "https://github.com/Himani-Patil/JFST_Project#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "hbs": "^4.2.0",
+    "lodash": "^4.17.21",
+    "mongodb": "^6.5.0",
+    "mongoose": "^7.0.3",
+    "node": "^19.8.1",
+    "node-xml-stream": "^1.0.2",
+    "nodemon": "^3.1.0",
+    "xml2js": "^0.6.2",
+    "xml2js-parser": "^1.1.1",
+    "xmlbuilder2": "^3.0.2"
+  },
+  "keywords": [
+    "yo"
+  ],
+  "devDependencies": {}
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+
+<div style="background-color: #ebf0fc;">
+    <%- include("partials/header") -%>
+    <div class="card" style="background-color: white;">
+<title>Mentee Registration Form</title>
+<link rel="stylesheet" href="css\styles.css">
+
+<body>
+<div class="container">
+<h1>Mentee Registration Form</h1>
+<div class="form-wrapper">
+<form action="mailto:nikita.raut@cumminscollege.in" name="myform"  onsubmit="return validateForm()" method="post" enctype="text/plain">
+
+  <div class="form-item"
+  <label for ="FirstName"> First Name:</label>
+  <input type='text' name="FirstName"><span
+  class="formerror"><b></b></span>
+  </div>
+  <div class="form-item"
+  <label for ="LastName"> Last Name:</label>
+  <input type='text' name="LastName" value="">
+  </div>
+<div class="form-item">
+<label for="department">Department:</label>
+</div>
+<div class="form-item">
+<select name="department" id="department" required>
+<option value="electrical">Computer Engineering</option>
+<option value="electrical">Information Technology</option>
+<option value="electrical">ENTC</option>
+</select>
+</div>
+<div class="form-item"
+<label for ="Emailid"> Email Id:</label>
+<input type='email' name="email" value="" ><br>
+</div>
+<div class="form-item">
+  <label for="hiring">Hiring:</label>
+  </div>
+  <div class="form-item">
+  <select name="hiring" id="hiring" required>
+  <option value="electrical">Intership</option>
+  <option value="electrical">Placement</option>
+  </select>
+</div>
+
+<div class="form-item"
+<label for ="cgpa">CGPA:</label>
+<input type='number' step = "Any" name="cgpa" value=""><br>
+</div>
+<div class="form-item">
+  <label for="gradution year">gradution year:</label>
+</div>
+<div class="form-item">
+  <select name="gradution year" id="gradution year" required>
+  <option value="electrical">2024</option>
+  <option value="electrical">2025</option>
+  <option value="electrical">2026</option>
+
+  </select>
+</div>
+
+<div class="form-item">
+  <label for="Proficient Language">Proficient Language:</label>
+</div>
+<div class="form-item">
+  <select name="" id="Proficient Language" required>
+  <option value="electrical">Java</option>
+  <option value="electrical">python</option>
+  <option value="electrical">c++</option>
+  <option value="electrical">c</option>
+
+  </select>
+</div>
+
+<div class="form-item"
+<label for ="company">Company:</label>
+<input type='company' name="company" value=""><br>
+</div>
+<div class="form-item">
+<label for="phonenumber">Tel/Mobile:</label>
+<input type="tel" name="phonenumber" id="phonenumber"
+placeholder="XXX XXX XXXX" >
+</div>
+<div class="form-item">
+<label for="gender">Gender:</label>
+</div>
+<div class="form-item">
+<select name="gender" id="gender" required>
+    <option value="sex">Male</option>
+    <option value="sex">Female</option>
+    <option value="sex">Other</option>
+    </select>
+</div>
+<div class="form-item"
+<label>Your Resume:</label>
+<input type='file' name="resume" value="" required><br>
+</div>
+<div class="form-item"
+<label >Your Linkedin ID:</label>
+<input type='url' name="ID" value="" required><br>
+</div>
+<label>Do you want to sign up to the email list?</label>
+<input type="checkbox" name="" value="">
+<hr>
+<button class="register" type="submit">Register</button>
+</div>
+</div>
+</form>
+</body>
+
+<script>
+function validateForm()
+{
+var returnval=true;
+var fname=document.myform.FirstName.value;
+if (fname==null || fname==""){
+alert("First name can't be blank");
+return false;
+}
+else if(fname.length<2)
+{
+alert("Length of first name is too short");
+return false;
+}
+var lname=document.myform.LastName.value;
+if (lname==null || lname==""){
+alert("Last name can't be blank");
+return false;
+}
+else if(lname.length<2)
+{
+alert("Length of last name is too short");
+return false;
+}
+var x=document.myform.Emailid.value;
+var atposition=x.indexOf("@");
+var dotposition=x.lastIndexOf(".");
+if (x==null || x==""){
+alert("email can't be blank");
+return false;
+}
+else if (atposition<1 || dotposition<atposition+2 ||
+dotposition+2>=x.length)
+{
+alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);
+return false;
+}
+var phno=document.myform.phonenumber.value;
+if (phno==null || phno==""){
+alert("Phone number can't be blank");
+return false;
+}
+else if(phno.length<10 || phno.length>10)
+{
+alert("Phone number should have 10 digits");
+return false;
+}
+var state=document.myform.pstate.value;
+if (state==null || state==""){
+alert("state name can't be blank");
+return false;
+}
+else if(state.length<2)
+{
+alert("Length of state name is too short");
+return false;
+}
+var achievements=document.myform.Yourachievements.value;
+if (achievements==null || achievements==""){
+alert(" achievements can't be blank");
+return false;
+}
+else if(achievements.length<50)
+{
+alert("words should be greater than 50");
+return false;
+}
+}
+</script>

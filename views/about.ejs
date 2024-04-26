@@ -1,0 +1,104 @@
+<!--<div style="background-color: #ebf0fc;">
+
+
+    <div class="aboutus">
+        <h1 class="heading" style="margin-top: 70px; color: #182747; margin-bottom: 30px;">ABOUT US</h1>
+        <div style="text-align: left; padding-left: 70px; padding-right: 70px; font-size: 20px;">
+            <p>Hello! This website is exclusively made for Third Year students; To help them during their Intership Hiring Process.</p>
+            <p>It is managed by Training and Placement Cell of Cummins College of Engineering for Women, Pune.</p>
+            <br><p style="color: #284177; font-weight: bold;">About Our TNP Cell :</p>
+            <p>The Training & Placement Cell plays an integral role in creating the illustrious placement record of Cummins College of Engineering for Women, Pune. It ensures smooth functioning of the placement activities in the campus and virtually. The cell further facilitates training activities of the students and makes sure they get placements and internships in the best of the companies. Our skilled and dedicated staff always tries to deliver precisely planned services to the student community and our recruiters.</p>
+            <br><p style="color: #284177; font-weight: bold;">Companies Visiting for Internship Hiring :</p>
+            <br><img src="images/listOfCompanies.jpg" height="auto" width="1050px" style="margin-left: 10px;">
+        </div>
+    </div>
+
+
+    <div style="position: absolute; padding-left: 50px;">
+        <h3 style="font-weight: bold; color: white; padding-top: 20px;">Traning and Placement Officer:</h3>
+        <br>
+        <img src="images/TPO.jpg" width="150px" height="160px">
+        <p style="font-weight: bold; font-size:large;">Prof. Amit Rajurkar</p><br>
+        <p style="margin-left: 0%; position: absolute; margin-left: 40px;">Landline Direct: 020-25311131/25311132</p><br>
+        <p style="margin-left: 0%; position: absolute; margin-left: 40px;">Mobile: 9822493920</p><br>
+        <p style="margin: 0%; position: absolute; margin-left: 40px;">Email id: placements@cumminscollege.in</p>
+    </div>
+
+    <div style="border-left: 1px solid white; height: 400px; margin-left: 470px; position: absolute;"></div>
+
+    <div style=" height:400px; margin-right: 100px; margin-left: 570px;">
+        <h3 style="font-weight: bold; color: white; padding-top: 40px;">Traning and Placement Team 2022-23</h3>
+        <div style="padding-top: 50px;">
+            <img src="images/member1.jfif" height="160px" width="140px" style="margin-right: 50px;">
+            <img src="images/member2.jfif" height="160px" width="140px" style="margin-right: 50px;">
+            <img src="images/member3.jfif" height="160px" width="140px" style="margin-right: 50px;">
+            <img src="images/member4.jfif" height="160px" width="140px">
+        </div>
+        <div style="padding-top: 20px; padding-left: 40px;" ><p style="float: left; margin-right: 100px; margin-left: 50px;">Anna Watson</p><p style="float: left; margin-right: 120px;">Harry Potter</p><p style="float: left; margin-right: 110px;">Lucy Pevensie</p><p style="float: left;">Susan Caspian</p></div>
+    </div>
+</div>
+
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="static/scripts/responses.js"></script>
+<script src="static/scripts/chat.js"></script>
+<script type="text/javascript">
+window.addEventListener("message", (e) => {
+if (e.data.type === "speechsegment") {
+  const segment = e.data.segment;
+
+  // Handle speech segment and make tentative changes to app state
+  console.log("speechsegment message:", segment);
+
+  if (segment.isFinal) {
+    // Handle speech segment and make permanent changes to app state
+    // Optionally show confirmation
+    window.postMessage({ type: "speechhandled", success: true }, "*");
+  }
+}
+});
+</script>
+<script>
+    function showNext(current)
+    {
+        switch(current){
+            case 'news1': $("#news1").hide(); $("#news2").show(); break;
+            case 'news2': $("#news2").hide(); $("#news3").show(); break;
+            case 'news3': alert("End"); break;
+        }
+    }
+
+    function showPrev(current)
+    {
+        switch(current){
+            case 'news1': alert("End"); break;
+            case 'news2': $("#news2").hide(); $("#news1").show(); break;
+            case 'news3': $("#news3").hide(); $("#news2").show(); break;
+        }
+    }
+
+    $(".more_link").mouseover(function(){
+        $(this).css("color","black");
+        $(this).mouseleave(function(){
+        $(this).css("color","#182747");
+        });
+    });
+</script>-->
+
+<div style="background-color: #ebf0fc;">
+    <%- include("partials/header") -%>
+
+    <div class="aboutus">
+        <h1 class="heading" style="margin-top: 70px; color: #182747;font-style:normal ; margin-bottom: 30px;">ABOUT US</h1>
+        <div style="text-align: left; padding-left: 70px; padding-right: 70px; font-size: 20px;">
+            <p>Hello! This website is exclusively made for Third and Fourth Year students; To help them during their Intership Hiring Process.</p>
+            <p>It is managed by Training and Placement Cell of KIIT DU, Bhubaneswar.</p>
+            <br><p style="color: #284177; font-weight: bold;">About Our TNP Cell :</p>
+            <p>The Training & Placement Cell plays an integral role in creating the illustrious placement record of KIIT DU, Bhubaneswar. It ensures smooth functioning of the placement activities in the campus and virtually. The cell further facilitates training activities of the students and makes sure they get placements and internships in the best of the companies. Our skilled and dedicated staff always tries to deliver precisely planned services to the student community and our recruiters.</p>
+            <br><p style="color: #284177; font-weight: bold;">Companies Visiting for Internship Hiring :</p>
+            <br><img src="images/listOfCompanies.jpg" height="auto" width="900px" style="margin-left: 0;">
+        </div>
+    </div>
+    
